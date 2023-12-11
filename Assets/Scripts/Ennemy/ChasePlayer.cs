@@ -10,6 +10,8 @@ public class ChasePlayer : MonoBehaviour
     private GameObject player = null;
 
 
+    
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player");

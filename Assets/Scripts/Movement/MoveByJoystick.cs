@@ -9,6 +9,7 @@ public class MoveByJoystick : MonoBehaviour
     public Joystick joystick = null;
     public float speed = 10.0f;
     public Rigidbody body = null;
+    public Animator animator = null;
 
 
     // Update is called once per frame
@@ -20,6 +21,9 @@ public class MoveByJoystick : MonoBehaviour
             inputMovement.x * speed,
             body.velocity.y,
             inputMovement.y * speed);
-
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", inputMovement.magnitude * speed);
+        }
     }
 }
