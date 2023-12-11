@@ -29,7 +29,8 @@ public class MovePositionByAxis : MonoBehaviour
             jump = Input.GetAxisRaw("Jump");
             isGrounded = false;
         }
-
+        Debug.Log(xAxis);
+        Debug.Log(yAxis);
 
         transform.Translate(xAxis * speed * Time.deltaTime, jump * jumpSpeed * Time.deltaTime, yAxis * speed * Time.deltaTime);
     }
